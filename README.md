@@ -1,7 +1,6 @@
-# ml-math
+# Scientific Computing
 
-- Implementing theoretical mathematics concepts in python to enhance scientific computing
-  knowledge.
+- Implementing theoretical mathematics, physics and general scientific computations concepts in python to enhance practical knowledge.
 
 resources and tutorials followed along:
 
