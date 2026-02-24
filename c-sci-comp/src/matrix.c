@@ -49,3 +49,28 @@ void set_matrix(matrix_t* matrix, size_t i, size_t j, double val)
 
     matrix->data[i*matrix->cols + j] = val;
 }
+
+void fill_matrix(matrix_t* matrix, double val)
+{
+    assert(matrix != NULL);
+
+    size_t total = matrix->rows * matrix->cols;
+    for (size_t i = 0; i < total; ++i)
+    {
+        matrix->data[i] = val;
+    }
+}
+
+void print_matrix(const matrix_t* matrix)
+{
+    assert(matrix != NULL);
+
+    for (size_t i = 0; i < matrix->rows; ++i)
+    {
+        for (size_t j = 0; j < matrix->cols; ++j)
+        {
+            printf("%10.6f ", get_matrix(matrix, i, j));
+        }
+        printf("\n");
+    }
+}
