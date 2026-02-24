@@ -46,3 +46,24 @@ void set_vector(vector_t* vec, size_t i, double val)
 
     vec->data[i] = val;
 }
+
+void fill_vector(vector_t* vec, double val)
+{
+    assert(vec != NULL);
+
+    for (size_t i = 0; i < vec->size; ++i)
+    {
+        vec->data[i] = val;
+    }
+}
+
+void print_vector(const vector_t* vec)
+{
+    assert(vec != NULL);
+
+    for (size_t i = 0; i < vec->size; ++i)
+    {
+        printf("%10.6f ", vec->data[i]);
+    }
+    printf("\n");
+}
