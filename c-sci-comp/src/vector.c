@@ -30,3 +30,19 @@ void free_vec(vector_t* vec)
     free(vec->data);
     free(vec);
 }
+
+double get_vector(const vector_t* vec, size_t i)
+{
+    assert(vec != NULL);
+    assert(i < vec->size);
+
+    return vec->data[i];
+}
+
+void set_vector(vector_t* vec, size_t i, double val)
+{
+    assert(vec != NULL);
+    assert(i < vec->size);
+
+    vec->data[i] = val;
+}
