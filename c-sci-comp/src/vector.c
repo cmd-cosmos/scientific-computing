@@ -20,3 +20,13 @@ vector_t* create_vec(size_t size)
     }
     return vec;
 }
+
+void free_vec(vector_t* vec)
+{
+    if (!vec)
+    {
+        return;
+    }
+    free(vec->data);
+    free(vec);
+}
