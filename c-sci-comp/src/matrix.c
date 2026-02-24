@@ -21,3 +21,31 @@ matrix_t* create_matrix(size_t rows, size_t cols)
     }
     return matrix;
 }
+
+void free_matrix(matrix_t* matrix)
+{
+    if (!matrix)
+    {
+        return;
+    }
+    free(matrix->data);
+    free(matrix);
+}
+
+double get_matrix(const matrix_t* matrix, size_t i, size_t j)
+{
+    assert(matrix != NULL);
+    assert(i < matrix->rows);
+    assert(j < matrix->cols);
+
+    return matrix->data[i * matrix->cols + j];
+}
+
+void set_matrix(matrix_t* matrix, size_t i, size_t j, double val)
+{
+    assert(matrix != NULL);
+    assert(i < matrix->rows);
+    assert(j < matrix->cols);
+
+    matrix->data[i*matrix->cols + j] = val;
+}
