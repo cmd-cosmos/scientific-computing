@@ -17,6 +17,6 @@ void set_matrix(matrix_t* matrix, size_t i, size_t j, double val);
 
 void fill_matrix(matrix_t* matrix, double val);
 void print_matrix(const matrix_t* matrix);
-void swap_rows(matrix_t matrix, size_t r1, size_t r2);
+void swap_rows(matrix_t* matrix, size_t r1, size_t r2);
 
 #endif
